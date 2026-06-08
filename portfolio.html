@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-color: #0984e3;
+            --text-color: #2d3436;
+            --bg-color: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--text-color);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        /* Garis bawah dekoratif untuk judul */
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            /* Ukuran kartu lebih proporsional */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden; /* Agar gambar tidak keluar dari border radius */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Efek saat kursor menempel */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        /* Area gambar/thumbnail */
+        .card-image {
+            height: 160px;
+            background: #dfe6e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #b2bec3;
+            font-size: 0.9rem;
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: #636e72;
+            margin-bottom: 15px;
+        }
+
+        .btn-view {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-view:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Portfolio</h2>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-image">Thumbnail / Image</div>
+            <div class="card-content">
+                <span class="card-title">Project CV Website</span>
+                <p class="card-description">Website resume pribadi yang responsif dengan fitur dark mode dan integrasi kontak.</p>
+                <a href="#" class="btn-view">Lihat Detail →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">Thumbnail / Image</div>
+            <div class="card-content">
+                <span class="card-title">Project Login System</span>
+                <p class="card-description">Sistem autentikasi user menggunakan PHP dan enkripsi database untuk keamanan data.</p>
+                <a href="#" class="btn-view">Lihat Detail →</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio SPA - Muhammad Zaki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <span class="font-bold text-xl text-blue-600">CV Muhammad Zaki</span>
+                
+                <div class="hidden lg:flex space-x-1">
+                    <button data-page="home" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">Home</button>
+                    <button data-page="about" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">About</button>
+                    <button data-page="education" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">Education</button>
+                    <button data-page="experience" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">Experience</button>
+                    <button data-page="portfolio" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">Portfolio</button>
+                    <button data-page="certificate" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">Certificates</button>
+                    <button data-page="github" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">GitHub</button>
+                    <button data-page="contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">Contact</button>
+                    <button data-page="smartcampus" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition">GitHub</button>
+
+                </div>
+
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 pb-4 shadow-inner">
+            <div class="flex flex-col space-y-1 px-4 pt-2">
+                <button data-page="home" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">Home</button>
+                <button data-page="about" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">About</button>
+                <button data-page="education" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">Education</button>
+                <button data-page="experience" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">Experience</button>
+                <button data-page="portfolio" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">Portfolio</button>
+                <button data-page="certificate" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">Certificates</button>
+                <button data-page="github" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">GitHub</button>
+                <button data-page="contact" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium">Contact</button>
+                <button data-page="smartcampus" class="nav-link text-left px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">SmartCampus</button>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto mt-6 md:mt-10 px-4 mb-20">
+        <div id="content" class="bg-white p-6 md:p-8 rounded-xl shadow-lg min-h-[450px]">
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
